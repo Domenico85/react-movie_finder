@@ -3,11 +3,15 @@ import MovieCard from "./MovieCard";
 
 function MovieList({ movies }) {
   return (
-    <div>
+    <div className="row">
       {movies.length > 0 ? (
-        movies.map((movie) => <MovieCard key={movie.imdbID} movie={movie} />)
+        movies.map((movie) => (
+          <div key={movie.imdbID} className="col-md-4 mb-4">
+            <MovieCard movie={movie} />
+          </div>
+        ))
       ) : (
-        <p>No movies found.</p>
+        <p className="text-center">No movies found.</p>
       )}
     </div>
   );

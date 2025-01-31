@@ -5,7 +5,7 @@ import MovieDetail from "./pages/MovieDetail";
 
 function App() {
   return (
-    <div>
+    <div className="container mt-4">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movie/:id" element={<MovieDetail />} />
@@ -13,5 +13,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

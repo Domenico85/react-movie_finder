@@ -16,17 +16,20 @@ function MovieDetail() {
     fetchMovie();
   }, [id]);
 
-  if (!movie) return <div>Loading...</div>;
+  if (!movie) return <div className="text-center mt-4">Loading...</div>;
 
   return (
-    <div>
-      <h1>{movie.Title}</h1>
-      <img src={movie.Poster} alt={movie.Title} />
-      <p>{movie.Plot}</p>
-      <p>Released: {movie.Released}</p>
-      <p>Rating: {movie.imdbRating}</p>
+    <div className="card mx-auto" style={{ width: "18rem" }}>
+      <img src={movie.Poster} className="card-img-top" alt={movie.Title} />
+      <div className="card-body">
+        <h5 className="card-title">{movie.Title}</h5>
+        <p className="card-text">{movie.Plot}</p>
+        <p className="card-text"><strong>Released:</strong> {movie.Released}</p>
+        <p className="card-text"><strong>Rating:</strong> {movie.imdbRating}</p>
+      </div>
     </div>
   );
 }
+
 
 export default MovieDetail;

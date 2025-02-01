@@ -61,7 +61,7 @@ movie-finder/
 
 ## 🖼️ Screenshots
 
-![Movie Finder Screenshot](https://via.placeholder.com/800x400)
+![Movie Finder Screenshot](public/img/movie-finder-app.jpg)
 
 ## 📜 License
 

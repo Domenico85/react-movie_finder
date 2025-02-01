@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function MovieDetail() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
@@ -26,10 +27,10 @@ function MovieDetail() {
         <p className="card-text">{movie.Plot}</p>
         <p className="card-text"><strong>Released:</strong> {movie.Released}</p>
         <p className="card-text"><strong>Rating:</strong> {movie.imdbRating}</p>
+        <button className="btn btn-secondary mt-3" onClick={() => navigate(-1)}>Go Back</button>
       </div>
     </div>
   );
 }
-
 
 export default MovieDetail;
